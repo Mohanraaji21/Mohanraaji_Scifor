@@ -1,0 +1,7 @@
+1.What is HTML:
+
+	The HTML is known as the HyperText Markup Language used to create webpages. HTML is basically used to assign the structure and content of a webpage.
+
+2.HTML tags:
+
+	The HTML tags are the predefined keywords which are used to allocate and assign the content as needed. These tags tells the browser how to display the content given under a specific tag. There are two types of tags - Paired tags and unpaired tags. 
