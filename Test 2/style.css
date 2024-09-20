@@ -1,0 +1,38 @@
+body{
+    margin: 0;
+    background-color: rgb(243, 150, 27);
+}
+
+#heading{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 100;
+    padding-top: 3%;
+}
+
+#heading2
+{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: center;
+    font-size: 25px;
+    color: aliceblue;
+}
+
+
+#coffee{
+    height: 50%;
+    width: 50%;
+    background-color: rgb(128, 62, 0);
+    margin-left: 25%;
+}
+
+#ctable{
+    margin-left: 80px;
+    text-align: left;
+    background-color: aliceblue;
+    background-size: auto;
+    width:500px;
+    height: 500px;
+    font-family: cursive;
+}
