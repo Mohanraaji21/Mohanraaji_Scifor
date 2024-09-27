@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-image: url("https://wallpapers.com/images/hd/2d-stardew-valley-mountains-and-sky-bxdaa0lic9b5coki.jpg");
+            background-repeat: no-repeat;
+            
+        }
+
+        form{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 500px;
+            background-color: rgba(64, 168, 168, 0.63);
+            width: 50%;
+            border-radius: 10px;
+            padding: 20px;
+        }
+
+        input{
+            width: 60%;
+            height: 30px;
+            margin: 10px 0;
+            padding: 5px;
+        }
+
+        label{
+            font-size: 20px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            margin-bottom: 5px;
+        }
+
+        input[type="submit"] {
+            cursor: pointer;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            width: 40%;
+        }
+
+        h1{
+            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+
+    </style>
+</head>
+<body>
+
+    <h1>Welcome to Stardew Valley</h1>
+    <form >
+
+        <label for="username">Username:</label>
+        <input type="text" name="username" placeholder="Enter Username">
+        
+        <label for="email">Email:</label>
+        <input type="email" name="email" placeholder="Enter email">
+
+        <label for="pass">Password:</label>
+        <input type="text" name="pass" placeholder="Enter password">
+
+        <input type="submit" value="Submit">
+
+    </form>
+</body>
+</html>
