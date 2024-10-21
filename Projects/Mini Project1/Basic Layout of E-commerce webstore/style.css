@@ -1,4 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Playwrite+AU+VIC:wght@100..400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Monoton&family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Love+Light&family=Monoton&family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Life+Savers:wght@400;700;800&family=Love+Light&family=Monoton&family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Life+Savers:wght@400;700;800&family=Love+Light&family=Monoton&family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Life+Savers:wght@400;700;800&family=Love+Light&family=Monoton&family=Press+Start+2P&family=Sedgwick+Ave&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Life+Savers:wght@400;700;800&family=Love+Light&family=Monoton&family=Press+Start+2P&family=Protest+Revolution&family=Sedgwick+Ave&display=swap');
 
 body{
     margin: auto;
@@ -7,24 +14,26 @@ body{
 
 
 nav img{
-    height: 15%;
-    width: 15%;
+    height: 10%;
+    width: 10%;
 }
 
 #profile{
-    height: 5%;
-    width: 5%;
+    height: 10%;
+    width: 10%;
     cursor: pointer;
 }
 
 nav li{
-    padding-left: 20%;
-    font-size: 25px;
+    padding-left: 5%;
+    font-size: 20px;
 }
 
 .navbar-brand{
-    font-size: 40px;
-    
+    font-size: 35px;
+   /* font-family: "Press Start 2P", system-ui;*/
+   font-family: "Monoton", sans-serif;
+
 }
 
 #action{
@@ -34,7 +43,7 @@ nav li{
 
 #adventure{
     position: relative;
-    margin-top: 90%;
+    margin-top: 120%;
 }
 
 #poetry
@@ -51,7 +60,10 @@ nav li{
 #love{
     position: relative;
     margin-top: 5%;
+
 }
+
+
 
 /*#action img{
     height: 250px;
@@ -64,7 +76,7 @@ nav li{
 }*/
 
 .card img{
-    height: 500px;
+    height: 350px;
 }
 
 #cont h1{
@@ -85,3 +97,30 @@ nav li{
   .card:hover{
     transform: scale(1.1);
   }
+
+#love h1{
+    font-family: "Love Light", cursive;
+    letter-spacing: 15px;
+    font-weight: 400;
+}
+
+#life h1{
+    font-family: "Life Savers", serif;
+
+}
+
+#poetry h1{
+    font-family: "Cedarville Cursive", cursive;
+    font-weight: 400;
+
+}
+
+#adventure h1{
+    font-family: "Sedgwick Ave", cursive;
+    font-weight: 400;
+}
+
+#action h1{
+    font-family: "Protest Revolution", sans-serif;
+    font-weight: 400;
+}
