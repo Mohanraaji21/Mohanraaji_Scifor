@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Foundation Form</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites/dist/css/foundation.min.css">
+</head>
+<body>
+  <div class="grid-container">
+    <h2 class="primary callout">Registration Form</h2>
+    
+    <div class="secondary callout">
+      <form data-abide>
+        <div class="grid-x grid-padding-x">
+          <div class="medium-6 cell">
+            <label>First Name
+              <input type="text" placeholder="Enter your first name" required>
+            </label>
+          </div>
+          <div class="medium-6 cell">
+            <label>Last Name
+              <input type="text" placeholder="Enter your last name" required>
+            </label>
+          </div>
+        </div>
+
+        <div class="grid-x grid-padding-x">
+          <div class="medium-6 cell">
+            <label>Date of Birth
+              <input type="date" required>
+            </label>
+          </div>
+        </div>
+
+        <div class="grid-x grid-padding-x">
+          <div class="medium-12 cell">
+            <fieldset class="fieldset">
+              <legend>Courses</legend>
+              <label><input type="checkbox" value="Java"> Java</label>
+              <label><input type="checkbox" value="C"> C</label>
+              <label><input type="checkbox" value="Python"> Python</label>
+            </fieldset>
+          </div>
+        </div>
+
+        <div class="grid-x grid-padding-x">
+          <div class="medium-12 cell">
+            <fieldset class="fieldset">
+              <legend>Preferred Timing</legend>
+              <label><input type="radio" name="timing" value="6-7" required> 6-7 PM</label>
+              <label><input type="radio" name="timing" value="7-8"> 7-8 PM</label>
+              <label><input type="radio" name="timing" value="8-9"> 8-9 PM</label>
+            </fieldset>
+          </div>
+        </div>
+
+        <div class="grid-x grid-padding-x">
+          <div class="medium-6 cell">
+            <label>Email
+              <input type="email" placeholder="Enter your email" required>
+            </label>
+          </div>
+        </div>
+
+        <div class="grid-x grid-padding-x">
+          <div class="medium-6 cell">
+            <label>Password
+              <input type="password" placeholder="Enter your password" required>
+              <span class="form-error">Password is required.</span>
+            </label>
+          </div>
+        </div>
+
+        <div class="grid-x grid-padding-x">
+          <div class="medium-6 cell">
+            <button type="submit" class="button alert">Submit</button>
+          </div>
+        </div>
+
+      </form>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/foundation-sites/dist/js/foundation.min.js"></script>
+  <script>
+    $(document).foundation();
+  </script>
+</body>
+</html>
