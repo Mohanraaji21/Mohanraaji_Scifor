@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            text-align: center;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Comparison</h1>
+    
+    <script>
+
+        let a=10;
+        let b=20;
+        let c="10";
+
+
+        document.write("a = 10 ; b = 20 ; c = '10' <br><br>" );
+
+        if(a == c)
+            document.write(" a==c : The values of a and c are equal <br><br>");
+        else
+            document.write("The values are not equal");
+
+
+        if(a === c)
+            document.write(" The values are equal and both are same type");
+        else
+            document.write(" a===c : The values are not eqaul OR they are not the same type <br><br>");
+
+        if(a != b)
+            document.write(" a!=b : a is not eqaul to b <br><br>");
+        else
+            document.write("a is equal to b");
+
+        if(a !== b)
+            document.write(" a!==b  :a is not eqaul to b or not same type <br><br>");
+        else
+            document.write("a is equal to b and same type");
+
+        if(a < b)
+            document.write(" a<b : a is less than b <br><br>");
+        
+        if(b > a)
+            document.write(" b>a  :b is greater than a <br><br>");
+
+        if(b >= a)
+            document.write(" b>=a : b is greater than or equal to a <br><br>");
+        
+        if(a <= b)
+            document.write(" a<=b :a is lesser than or equal to b <br><br>");
+    </script>
+</body>
+</html>
