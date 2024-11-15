@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1>Addition</h1>
+
+    <div id="ans">
+        
+    </div>
+
+    <div>
+        <button onclick="again()">Once More!</button>
+    </div>
+
+    <script>
+        again();
+
+        function again(){
+        var num1 = prompt("Enter Number 1");
+        var num2 = prompt("Enter Number 2");
+        add(num1, num2);
+        }
+
+        function add(num1, num2)
+        {
+            var res = Number(num1) + Number(num2);
+            document.getElementById('ans').innerHTML = `Ans : ${res}`;
+        }
+
+        
+    </script>
+</body>
+</html>
