@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"> -->
+</head>
+<body>
+
+    <div id="header">
+
+        <div class="container">
+            <nav>
+                <!-- <img src="images/Mohy3.png" class="logo"> -->
+                <span>Mohy</span>
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#About">About</a></li>
+                    <!--<li><a href="#">Education</a></li>
+                    <li><a href="#">Experience</a></li>
+                    <li><a href="#">Services</a></li>-->
+                    <li><a href="#Skills">Skills</a></li>
+                    <li><a href="#Certifications">Certifications</a></li>
+                    <li><a href="#Contact">Contact</a></li>
+                    <i class="fa-regular fa-circle-xmark" onclick="closemenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+            </nav>
+
+            <div class="header-text">
+                <p>Web Developer</p>
+                <h1>Hi, I'm <span>Mohanraaji !</span></h1>
+            </div>
+        </div>
+
+    </div>
+
+
+    <!-- --------------------------------About----------------------------------- -->
+
+
+    <div id="About">
+        <div class="container">
+            <div class="row">
+                <div class="abt-col">
+                    <h1 class="sub-title">About me</h1>
+
+                    <!-- <p>
+                        Hi, I’m Mohan, a passionate and driven individual with a deep love for technology <br>
+                        and creativity. With expertise in web development and a knack for problem-solving,<br>
+                        I thrive on building user-friendly and innovative digital solutions. I enjoy exploring<br>
+                        new frameworks, creating engaging user experiences, and continuously learning to stay ahead<br>
+                        in the ever-evolving tech world.
+                        <br>
+                        I aspire to create meaningful projects that blend functionality with creativity, aiming to<br>
+                        make a positive impact through technology. Let’s collaborate and turn ideas into reality!<br>
+                    </p> -->
+
+                    <p>
+                        Hi, I’m Mohan, a passionate and driven individual with a deep love for technology 
+                        and creativity. With expertise in web development and a knack for problem-solving,
+                        I thrive on building user-friendly and innovative digital solutions. I enjoy exploring
+                        new frameworks, creating engaging user experiences, and continuously learning to stay ahead
+                        in the ever-evolving tech world.
+                        
+                        I aspire to create meaningful projects that blend functionality with creativity, aiming to
+                        make a positive impact through technology. Let’s collaborate and turn ideas into reality!
+                    </p>
+
+                    <div class="tab-titles">
+                        <div class="tab-links active-link" onclick="opentab('Education')">Education</div>
+                        <div class="tab-links" onclick="opentab('Experience')">Experience</div>
+                        <div class="tab-links" onclick="opentab('Services')">Services</div>
+                    </div>
+                    <div class="tab-contents active-tab" id="Education">
+                        <ul>
+                           <li> 
+                            <span>2020-2024</span><br>
+                           <b> Bachelor of Technology in Electrical and Electronics Engineering </b><br>
+                            Sri Manakula Vinayagar Engineering College<br>
+                            CGPA: 8.16<br>
+                            </li>
+                            <li>
+                            <span>2018-2020</span><br>
+                          <b>HSC</b><br>
+                            St.Joseph of cluny Matric Higher Secondary School<br>
+                            Percentage:69.5%<br>
+                            </li>
+                            <li>
+                            <span>2017-2018</span><br>
+                          <b>SSLC</b><br>
+                            St.Joseph of cluny Matric Higher Secondary School<br>
+                            Percentage:81.2%<br>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="tab-contents" id="Experience">
+                        <ul>
+                            <li>
+                                <h3>Codsoft</h3>
+                                <span>July-Aug 2024</span>
+                                
+                                <h4>Web Development Intern</h4>
+                                <p> I've learned and worked with the basics of web development during thhe intern
+                                    period. It was a really educative experience and Learned techs like HTML, CSS,
+                                    Javascript, Bootsrap. 
+                                </p>
+                            </li>
+
+                            <li>
+                                <h3>Corizo</h3>
+                                <span>Aug-Oct 2024</span>
+                                
+                                <h4>Web Development Intern</h4>
+                                <p>
+                                    During the intern period, I sharpened my skills even one step further and got an intermediate
+                                    level of knowledge in Web-development. I've learned techs like React.js, Node.js, Express.js, MongoDB.
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
+
+
+                    <div class="tab-contents" id="Services">
+                        <ul>
+                            <li>Web-development</li>
+                            <li>2D Animation</li>
+                            <li>Internet Of Things</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- --------------------------------Skills----------------------------------- -->
+
+    <div class="skills" id="Skills">
+
+        <h1 class="subtitle">Skills</h1>
+        <div class="container">
+        <div class="skill">
+          <img src="images/skills/logo-2582748_1280.webp" alt="HTML">
+          <p>HTML</p>
+        </div>
+        <div class="skill">
+          <img src="images/skills/png-transparent-website-web-internet-css-style-css3-technology-social-media-logos-i-flat-colorful-icon-thumbnail.png" alt="CSS">
+          <p>CSS</p>
+        </div>
+        <div class="skill">
+          <img src="images/skills/png-transparent-js-logo-javascript-thumbnail.png" alt="JavaScript">
+          <p>JavaScript</p>
+        </div>
+        <div class="skill">
+          <img src="images/skills/png-transparent-js-react-js-logo-react-react-native-logos-icon-thumbnail.png" alt="React">
+          <p>React</p>
+        </div>
+        <div class="skill">
+          <img src="images/skills/png-transparent-js-logo-node-logos-and-brands-icon-thumbnail.png" alt="Node.js">
+          <p>Node.js</p>
+        </div>
+        <div class="skill">
+          <img src="images/skills/png-transparent-mongodb-icon-hd-logo-thumbnail.png" alt="MongoDB">
+          <p>MongoDB</p>
+        </div>
+        <div class="skill">
+          <img src="images/skills/Java-Logo.png" alt="Java">
+          <p>Java</p>
+        </div>
+        <div class="skill">
+          <img src="images/skills/Python-programming-logo-on-transparent-background-PNG.png" alt="Python">
+          <p>Python</p>
+        </div>
+        <div class="skill">
+          <img src="images/skills/png-clipart-django-web-development-web-framework-python-software-framework-django-text-trademark-thumbnail.png" alt="Django">
+          <p>Django</p>
+        </div>
+        <div class="skill">
+          <img src="images/skills/28968.png" alt="JSP">
+          <p>JSP</p>
+        </div>
+        <div class="skill">
+          <img src="images/skills/C_Logo.png" alt="C">
+          <p>C</p>
+        </div>
+        <div class="skill">
+          <img src="images/skills/png-transparent-mean-solution-stack-express-js-node-js-javascript-github-text-trademark-logo-thumbnail.png" alt="Express">
+          <p>Express</p>
+        </div>
+        <div class="skill">
+          <img src="images/skills/png-clipart-bootstrap-logo-thumbnail-tech-companies.png" alt="Bootstrap">
+          <p>Bootstrap</p>
+        </div>
+
+        </div>
+      </div>
+      
+
+
+
+      <!-- <div class="Certifications"> 
+
+        <div class="container">
+
+            <div id="certificationsCarousel" class="carousel slide" data-bs-ride="carousel">
+                
+                <div class="carousel-indicators">
+                  <button type="button" data-bs-target="#certificationsCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                  <button type="button" data-bs-target="#certificationsCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                  <button type="button" data-bs-target="#certificationsCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+              
+                
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="images/Certifications/autocad.png" class="d-block w-100" alt="Certificate 1">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="images/Certifications/AZ900.png" class="d-block w-100" alt="Certificate 2">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="images/Certifications/cloud.png" class="d-block w-100" alt="Certificate 3">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="images/Certifications/CSN.png" class="d-block w-100" alt="Certificate 3">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="images/Certifications/html_css_udemy.png" class="d-block w-100" alt="Certificate 3">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="images/Certifications/image.png" class="d-block w-100" alt="Certificate 3">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="images/Certifications/java.png" class="d-block w-100" alt="Certificate 3">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="images/Certifications/PL900.png" class="d-block w-100" alt="Certificate 3">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="images/Certifications/python.png" class="d-block w-100" alt="Certificate 3">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="images/Certifications/Screenshot 2024-10-22 122906.png" class="d-block w-100" alt="Certificate 3">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="images/Certifications/Screenshot 2024-10-22 123153.png" class="d-block w-100" alt="Certificate 3">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="images/Certifications/security.png" class="d-block w-100" alt="Certificate 3">
+                  </div>
+                </div>
+              
+               
+                <button class="carousel-control-prev" type="button" data-bs-target="#certificationsCarousel" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#certificationsCarousel" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+
+        </div>
+
+      </div>-->
+
+
+
+        <div class="Certifications" id="Certifications">
+
+            
+            <div class="Container">
+
+                <h1 class="sub-title">Certifications</h1>
+
+                <div class="slider">
+                    <div class="slides">
+                        <!-- <img class="slide" src="images/Certifications/autocad.png"> -->
+                        <img class="slide" src="images/Certifications/AZ900.png">
+                        <img class="slide" src="images/Certifications/cloud.png" >
+                        <img class="slide" src="images/Certifications/CSN.png" >
+                        <img class="slide" src="images/Certifications/html_css_udemy.png" >
+                        <img class="slide" src="images/Certifications/image.png" >
+                        <img class="slide" src="images/Certifications/java.png" >
+                        <img class="slide" src="images/Certifications/PL900.png" >
+                        <!-- <img class="slide" src="images/Certifications/python.png" > -->
+                        <img class="slide" src="images/Certifications/Screenshot 2024-10-22 122906.png" >
+                        <img class="slide" src="images/Certifications/Screenshot 2024-10-22 123153.png" >
+                        <img class="slide" src="images/Certifications/security.png" >
+
+                    </div>
+            
+                    <button class="prev" onclick="prevSlide()">&#10094</button>
+                    <button class="next" onclick="nextSlide()">&#10095</button>
+                </div>
+
+            </div>
+        </div>
+
+
+
+        <div class="Contact" id="Contact">
+            <h2>Contact Me</h2>
+            <p>If you have any questions or just want to say hi, feel free to reach out!</p>
+            <a href="resume/Mohanraaji B res.pdf" download="Mohanraaji_Resume" class="btn-download">Download Resume</a>
+            
+            <form id="contactForm">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" placeholder="Your Name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="Your Email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
+                </div>
+                <button type="submit" class="btn-submit">Submit</button>
+            </form>
+        </div>
+        
+
+
+
+      <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script> -->
+      <script src="https://kit.fontawesome.com/09dcc5810b.js" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+</html>
