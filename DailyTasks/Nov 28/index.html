@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+
+        function f1() {
+            var req = new XMLHttpRequest();
+            req.open("GET", "about.html", true); 
+            req.onreadystatechange = function () {
+                if (this.readyState == 4 && this.status == 200) {
+                    console.log(this.responseText); 
+                    document.getElementById("container").innerHTML = this.responseText; 
+                }
+            };
+            req.send(); 
+        }
+        
+    </script>
+</head>
+<body>
+    <h1>Welcome to Index Page</h1>
+    <button onclick="f1()">Load About Page</button>
+    <div id="container" style="border: 1px solid #ccc; padding: 10px; margin-top: 20px;">
+       
+    </div>
+</body>
+</html>
