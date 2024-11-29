@@ -1,0 +1,30 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: aliceblue;
+    color: black;
+}
+
+h1 {
+    text-align: center;
+    color: darkblue;
+}
+
+#output {
+    margin-top: 20px;
+    padding: 20px;
+    border: 2px solid lightblue;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0 4px 8px black;
+}
+
+#output p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin: 10px 0;
+}
+
+p {
+    color: rgb(0, 0, 0);
+}
