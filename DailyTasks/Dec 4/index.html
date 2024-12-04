@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+    <h1>Async / Await </h1>
+    <h2>Fetching Product Data</h2>
+
+
+    <div>
+
+
+    </div>
+    <script>
+
+    async function fetchProductData() {
+
+         const apiUrl = 'https://dummyjson.com/products/1';
+        
+        const response = await fetch(apiUrl);
+        
+        const productData = await response.json();
+        
+        console.log('Product Data:', productData);
+        document.getElementsByTagName(div).innerText = productData;
+}
+
+
+fetchProductData();
+
+    </script>
+</body>
+</html>
