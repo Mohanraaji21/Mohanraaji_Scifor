@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Manipulation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .data-container {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+    </style>
+</head>
+<body>
+    <h1>Array Manipulation Example</h1>
+    <button id="manipulateArray">Manipulate Array</button>
+    <div id="output" class="data-container"></div>
+
+    <script>
+        function manipulateArray(arr) {
+           
+            arr.push("VOLVO");
+
+          
+            return arr.map(element => element.toUpperCase());
+        }
+
+        document.getElementById('manipulateArray').addEventListener('click', () => {
+            const arraySize = parseInt(prompt("Enter the size of the array:"));
+            // if (isNaN(arraySize) || arraySize <= 0) {
+            //     alert("Please enter a valid positive number for the array size.");
+            //     return;
+            // }
+
+            const inputArray = [];
+            for (let i = 0; i < arraySize; i++) {
+                const element = prompt(`Enter element ${i + 1}:`);
+                inputArray.push(element);
+            }
+
+            const result = manipulateArray(inputArray);
+
+            const outputDiv = document.getElementById('output');
+            outputDiv.innerHTML = `<p>Original Array: [${inputArray.join(", ")}]</p>`;
+            outputDiv.innerHTML += `<p>Modified Array: [${result.join(", ")}]</p>`;
+        });
+    </script>
+</body>
+</html>
