@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="root"></div>
+    <script type="text/babel">
+        
+        const UserDetails = (props) => {
+            return (
+                <div>
+                    <h2>User Details</h2>
+                    <p>Name: {props.name}</p>
+                    <p>Age: {props.age}</p>
+                    <p>Email: {props.email}</p>
+                    <p>Mobile No: {props.mobileNo}</p>
+                    <p>City: {props.city}</p>
+                </div>
+            );
+        };
+
+        
+        class App extends React.Component {
+            constructor(props) {
+                super(props);
+                this.state = {
+                    currentUser: {
+                        name: "Mohy Jake",
+                        age: 21,
+                        email: "mohyjake21@gmail.com",
+                        mobileNo: "9080788709",
+                        city: "Villupuram"
+                    }
+                };
+            }
+
+            
+            showMohy = () => {
+                this.setState({
+                    currentUser: {
+                        name: "Mohy Jake",
+                        age: 21,
+                        email: "mohyjake21@gmail.com",
+                        mobileNo: "9080788709",
+                        city: "Villupuram"
+                    }
+                });
+            };
+
+           
+            showMohanraaji = () => {
+                this.setState({
+                    currentUser: {
+                        name: "Mohanraaji",
+                        age: 21,
+                        email: "mohanrajib21@gmail.com",
+                        mobileNo: "9600401417",
+                        city: "Chennai"
+                    }
+                });
+            };
+
+            render() {
+                return (
+                    <div>
+                        <h1>User Details</h1>
+                        <button onClick={this.showMohy}>Show Mohy</button>
+                        <button onClick={this.showMohanraaji}>Show Mohanraaji</button>
+
+                        {}
+                        <UserDetails
+                            name={this.state.currentUser.name}
+                            age={this.state.currentUser.age}
+                            email={this.state.currentUser.email}
+                            mobileNo={this.state.currentUser.mobileNo}
+                            city={this.state.currentUser.city}
+                        />
+                    </div>
+                );
+            }
+        }
+
+       
+        const container = document.getElementById("root");
+        const root = ReactDOM.createRoot(container);
+        root.render(<App />);
+    </script>
+</body>
+</html>

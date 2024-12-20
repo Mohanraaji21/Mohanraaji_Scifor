@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React Example</title>
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>    
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+</head>
+<body>
+    <div id="root"></div>
+    
+    <script type="text/babel">
+        class Car extends React.Component {
+            constructor(props) {
+                super(props);
+                this.state = {
+                    Name: "Raj",  
+                    Lname: "ssss",
+                    Email: "bc@gmail.com",
+                    BirthYear: 1998
+                };
+            }
+
+            render() {
+                return (
+                    <div>
+                        <h1>
+                            I am {this.state.Name} {this.state.Lname}
+                        </h1>
+                        <p>
+                            My Email is {this.state.Email} and my birth year is {this.state.BirthYear}.
+                        </p>
+                    </div>
+                );
+            }
+        }
+
+        const container = document.getElementById("root");
+        const root = ReactDOM.createRoot(container); 
+        root.render(<Car />);
+    </script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>    
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+
+    <style>
+        #root{
+            border: 2px solid black;
+            width: 80%;
+            padding: 100px;
+            text-align: center;
+
+        }
+    </style>
+</head>
+<body>
+    <div id="root"></div>
+        <script type="text/babel">
+            class Car extends React.Component{
+            constructor(props){
+            super(props);
+            this.state={
+            Name:"Mohy",
+            Lname:"Jake",
+            Email:"mohyjake21@gmail.com",
+            BirthYear:2003
+            };
+            }
+            Name=()=>{
+            this.setState({Name:"Mohanraaji"});
+            }
+            Lname=()=>{
+            this.setState({Lname:"B"});
+            }
+            render(){
+            
+            return(
+            <div>
+            <h1>I am {this.state.Name} {this.state.Lname}</h1>
+            <p>My Email is {this.state.Email} and my birthyear is {this.state.BirthYear} </p>
+            <button onClick={this.Name}>click here</button>
+            <button onClick={this.Lname}>click here</button>
+            </div>
+            );
+            }
+            }
+
+        const container = document.getElementById("root");
+        const root = ReactDOM.createRoot(container); 
+        root.render(<Car />);
+ </script>
+</body>
+</html>

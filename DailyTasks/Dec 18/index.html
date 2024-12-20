@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+  <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    .A, .B {
+      padding: 10px;
+      border: 1px solid #ccc;
+      margin-bottom: 10px;
+    }
+    .B {
+      border-color: #4caf50;
+    }
+    h2, h3 {
+      margin: 0 0 10px;
+    }
+  </style>
+</head>
+<body>
+  <div id="root"></div>
+
+  <script type="text/babel">
+
+    
+    class A extends React.Component {
+      render() {
+        return (
+          <div className="A">
+            <h3>Class A</h3>
+            <p>Data: {this.props.data}</p>
+          </div>
+        );
+      }
+    }
+
+    class B extends React.Component {
+      render() {
+        return (
+          <div className="B">
+            <h3>Class B</h3>
+            <p>Received Data: {this.props.data}</p>
+          </div>
+        );
+      }
+    }
+
+    class Parent extends React.Component {
+      render() {
+        const sharedData = "Hello from Parent Component!";
+        return (
+          <div>
+            <h2>Parent Component</h2>
+            <A data={sharedData} />
+            <B data={sharedData} />
+          </div>
+        );
+      }
+    }
+
+    ReactDOM.render(<Parent />, document.getElementById("root"));
+  </script>
+</body>
+</html>
