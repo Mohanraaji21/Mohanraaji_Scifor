@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>React 18 State Change Example</title>
+  <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+  <script src="https://unpkg.com/babel-standalone@6/babel.min.js" crossorigin></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="root"></div>
+
+  <script type="text/babel">
+    const { Component } = React;
+    const { createRoot } = ReactDOM;
+
+    class UpdateStateExample extends Component {
+      constructor(props) {
+        super(props);
+        this.state = {
+          name: 'Mohanraaji',
+          lname: 'B',
+          age: 21,
+          num: 9600401417,
+          mail: "mohanrajib21@gmail.com",
+        };
+      }
+
+      handleChange = () => {
+        this.setState({
+          name: 'Peter',
+          lname: 'Griffin',
+          age: 40,
+          num: 9080788709,
+          mail: "griffinsbrian21@gmail.com",
+        });
+      };
+
+      render() {
+        return (
+          <div>
+            <h2>Name: {this.state.name}</h2>
+            <h2>Last Name: {this.state.lname}</h2>
+            <h2>Age: {this.state.age}</h2>
+            <h2>Number: {this.state.num}</h2>
+            <h2>Mail: {this.state.mail}</h2>
+            <button onClick={this.handleChange}>Update Properties</button>
+          </div>
+        );
+      }
+    }
+
+    const rootElement = document.getElementById('root');
+    const root = createRoot(rootElement);
+    root.render(<UpdateStateExample />);
+  </script>
+</body>
+</html>
