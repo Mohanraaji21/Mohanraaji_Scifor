@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 50px;
+    }
+    button {
+      margin: 10px;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    .output {
+      margin-top: 20px;
+      font-size: 18px;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+  <h1>Weekly Test</h1>
+  <button onclick="findOddEven()">Find Odd and Even Numbers</button>
+  <button onclick="findFactorial()">Find Factorial</button>
+  <div id="output" class="output"></div>
+
+  <script>
+    function findOddEven() {
+      const num = parseInt(prompt("Enter a number to check if it's odd or even:"));
+      if (isNaN(num)) {
+        document.getElementById("output").innerHTML = `<h2>Find Odd and Even Numbers</h2><p>Please enter a valid number.</p>`;
+      } else {
+        const result = (num % 2 === 0) ? "Even" : "Odd";
+        document.getElementById("output").innerHTML = `<h2>Find Odd and Even Numbers</h2><p>The number ${num} is ${result}.</p>`;
+      }
+    }
+
+    function findFactorial() {
+      const num = parseInt(prompt("Enter a number to calculate its factorial:"));
+      if (isNaN(num) || num < 0) {
+        document.getElementById("output").innerHTML = `<h2>Find Factorial</h2><p>Please enter a valid non-negative number.</p>`;
+      } else {
+        let factorial = 1;
+        for (let i = 1; i <= num; i++) {
+          factorial *= i;
+        }
+        document.getElementById("output").innerHTML = `<h2>Find Factorial</h2><p>The factorial of ${num} is ${factorial}.</p>`;
+      }
+    }
+  </script>
+</body>
+</html>
