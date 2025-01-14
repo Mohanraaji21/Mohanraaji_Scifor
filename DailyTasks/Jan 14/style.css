@@ -21,6 +21,7 @@ header nav {
     background-color: white;
     margin-top: 0px;
     padding-top: 10px;
+    z-index: 1000;
 }
 
 header nav ul{
@@ -61,3 +62,17 @@ header nav ul li a{
 
 /* Navigation bar so far */
 
+/* Image Slider */
+
+.image-slider{
+    margin-top: 80px;
+}
+
+
+
+/* About section */
+
+.about{
+    text-align: center;
+    margin-top: 50px;
+}
