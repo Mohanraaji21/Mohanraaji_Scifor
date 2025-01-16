@@ -188,3 +188,51 @@ header nav ul li a{
     text-align: center;
     padding: 50px;
 }
+
+.sol-box-container{
+    display: flex;
+    margin-top: 80px;
+}
+
+.sol-box{
+    padding: 30px;
+}
+
+.sol-box .innerbox-heading a{
+    text-decoration: none;
+    color: rgb(39, 39, 39) ;
+}
+
+.sol-box .innerbox-heading a:hover{
+    color: rgb(2, 121, 168);
+    transition: 0.2s;
+}
+
+.solutions h1{
+    font-size: 30px;
+}
+
+/* Solutions So Far */
+
+/* Events */
+.events{
+    padding: 50px;
+    text-align: center;
+}
+
+.events h1{
+    font-size: 30px;
+    color: rgb(63, 63, 63);
+}
+
+.events-box{
+    padding: 0px 50px;
+}
+
+.events-box h2{
+    font-size: 20px;
+    color: rgb(77, 77, 77);
+}
+
+/* Events So Far */
+
