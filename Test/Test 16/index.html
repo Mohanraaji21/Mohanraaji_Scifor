@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+            text-align: center;
+        }
+
+        h1 {
+            margin-top: 50px;
+            color: #4a90e2;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        button {
+            display: inline-block;
+            margin: 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+            color: #fff;
+            background-color: #4a90e2;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #357ab8;
+        }
+
+        .output {
+            margin-top: 20px;
+            font-size: 18px;
+            color: #555;
+        }
+
+        #value, #formatted {
+            font-weight: bold;
+            color: #222;
+            margin-top: 10px;
+        }
+
+       
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>String Manipulator</h1>
+        <button onclick="promt()">Enter String</button>
+        <div class="output">Original String:</div>
+        <div id="value">(No string entered yet)</div>
+        <button onclick="uppercase()">Convert to Uppercase</button>
+        <button onclick="lowercase()">Convert to Lowercase</button>
+        <button onclick="substring()">Substring (2-5)</button>
+        <div class="output">Formatted String:</div>
+        <div id="formatted">(No formatted output yet)</div>
+    </div>
+
+    
+    <script>
+        function promt() {
+            var value = prompt('Enter a String');
+            document.getElementById('value').innerHTML = value || '(No string entered yet)';
+        }
+
+        function uppercase() {
+            var value = document.getElementById('value').innerHTML;
+            if (value === '(No string entered yet)') {
+                alert('Please enter a string first.');
+                return;
+            }
+            var upper = value.toUpperCase();
+            document.getElementById('formatted').innerHTML = upper;
+        }
+
+        function lowercase() {
+            var value = document.getElementById('value').innerHTML;
+            if (value === '(No string entered yet)') {
+                alert('Please enter a string first.');
+                return;
+            }
+            var lower = value.toLowerCase();
+            document.getElementById('formatted').innerHTML = lower;
+        }
+
+        function substring() {
+            var value = document.getElementById('value').innerHTML;
+            if (value === '(No string entered yet)') {
+                alert('Please enter a string first.');
+                return;
+            }
+            var int1 = prompt('Enter the first index (starting from 0):');
+            var int2 = prompt('Enter the second index:');
+
+            if (isNaN(int1) || isNaN(int2)) {
+                alert('Please enter valid numerical indices.');
+                return;
+            }
+
+            var sub = value.substring(parseInt(int1), parseInt(int2));
+            document.getElementById('formatted').innerHTML = sub;
+        }
+    </script>
+</body>
+</html>
