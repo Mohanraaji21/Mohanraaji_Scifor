@@ -320,16 +320,60 @@ header nav ul li a{
     display: flex;
     flex-direction: row;
     justify-content: center;
-    list-style: none;
-    
+    list-style: none;   
 }
 
-.contact ul li img{
+/* .contact ul li img{
     width: 50px;
     height: 50px;
 }
 
+.contact ul{
+    margin-left: 50px;
+}
+
 .contact ul li{
-    padding-left: 50px;
+    padding-left: 80px;
     margin-top: 50px;
 }
+
+.contact ul li p{
+text-align: center;
+transform: translateX(-40%);
+} */
+
+.contact .contact-images li{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 40px;
+    margin-right: 110px;
+}
+
+.contact .contact-images img{
+    width: 50px;
+    height: 50px;
+    align-items: space-between;
+    margin-left: 80px;
+}
+
+.contact .contact-details li{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    /* margin-top: 50px; */
+    margin-right: 40px;
+}
+
+.contact .contact-details p{
+    /* width: 50px;
+    height: 50px; */
+    align-items: space-between;
+    /* margin-left: 50px; */
+    color: white;
+    font-weight: 500;
+}
+
+/* Contact So Far */
+
+
