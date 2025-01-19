@@ -27,11 +27,12 @@ header nav {
 header nav ul{
     width: 100%;
     display: flex;
+    align-items: flex-end;
     flex-direction: row;
     list-style: none;
     /* margin-right: 0; */
-    margin-top: 5%;
-    transform: translateX(60%);
+    margin-top: 3%;
+    transform: translateX(70%);
 }
 
 header nav ul li a{
@@ -42,12 +43,16 @@ header nav ul li a{
     /* font-weight: bold; */
     color: black;
     text-decoration: none;
-    background-color: turquoise;
+    background-color: rgb(0, 183, 255);
     margin-right: 10px;
 }
 
 .menu{
     margin-right: 0;
+}
+
+.menu a{
+    font-size: 13px;
 }
 
 .search-img{
@@ -376,4 +381,148 @@ transform: translateX(-40%);
 
 /* Contact So Far */
 
+/* Footer */
+footer{
+    width: 100%;
+    background-color: rgb(28, 45, 51);
+}
 
+footer .container{
+    width: 100%;
+}
+
+footer .inner-container{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 50px;
+    color: white;
+    
+}
+
+footer .inner-container div{
+    /* margin: 20px; */
+    font-size: 13px;
+    width: 300px;
+}
+
+footer .inner-container div ul{
+    list-style: ">";
+    padding: 0;
+    margin: 0;
+}
+
+footer .inner-container div h1{
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+/* .google-map{
+    margin: 0;
+    padding: 0;
+} */
+
+footer .footer-address{
+    width: 400px !important;
+}
+
+footer .footer-address h5{
+    font-size: 13px;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+footer .links a{
+    color: rgb(158, 158, 158);
+    text-decoration: none;
+}
+
+footer .links a:hover{
+
+    color: rgb(34, 92, 199);
+}
+
+footer .inner-container .get-in-touch form{
+    width: 230px;
+
+}
+
+footer .inner-container .get-in-touch form input{
+    width: 100%;
+    padding: 5px;
+    margin: 5px 0;
+}
+
+footer .inner-container .get-in-touch form input[type="submit"]{
+    width: 30%;
+    padding: 5px;
+    margin: 5px 0;
+    background-color: rgb(0, 154, 214);
+    border: none;
+    color: white;
+    text-transform: uppercase;
+}
+
+.footer-address {
+    color: rgb(158, 158, 158);
+}
+
+.footer-address h1, .footer-address h5{
+    color: white;
+}
+
+
+.site-info{
+    background-color: rgb(97, 97, 97);
+    padding: 10px;
+    color: white;
+    font-size: 15px;
+    padding-left: 80px;
+    border-top: #007bff 3px solid;
+
+}
+
+.social-icons{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-top: 10px;
+    /* display: inline; */
+}
+
+.social-icons img{
+    
+    width: 20px;
+    height: 20px;
+    margin: 10px;
+}
+
+.site-info .container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+/* About us page */
+
+.about-page{
+    margin-top: 100px;
+    padding-left: 30px;
+}
+
+.about-page h1{
+    font-size: 30px;
+}
+
+.about-page p{
+    font-size: 15px;
+}
+
+.about-page .line{
+    margin-left:0px ;
+}
+
+button{
+    cursor: pointer;
+}
