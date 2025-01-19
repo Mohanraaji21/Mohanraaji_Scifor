@@ -24,3 +24,15 @@ const carousel = document.getElementById('cardCarousel');
       indicator.classList.toggle('active', index === currentIndex);
     });
   };
+
+
+  // Navigation Highlights
+
+  const navLinks = document.querySelectorAll('.nav-link');
+
+navLinks.forEach(link => {
+    link.addEventListener('click', function() {
+        navLinks.forEach(link => link.classList.remove('active')); // Remove 'active' class from all links
+        this.classList.add('active'); // Add 'active' class to the clicked link
+    });
+});
