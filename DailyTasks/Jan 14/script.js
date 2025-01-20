@@ -36,3 +36,42 @@ navLinks.forEach(link => {
         this.classList.add('active'); // Add 'active' class to the clicked link
     });
 });
+
+
+// Back to Top Button
+
+const backToTopButton = document.getElementById('back-to-top');
+
+// Show the button when scrolled to the second section
+window.addEventListener('scroll', () => {
+    const secondSection = document.getElementById('services');
+    const secondSectionTop = secondSection.getBoundingClientRect().top + window.scrollY;
+
+    if (window.scrollY >= secondSectionTop - window.innerHeight / 2) {
+        backToTopButton.style.display = 'block';
+    } else {
+        backToTopButton.style.display = 'none';
+    }
+});
+
+// Scroll back to the top when the button is clicked
+backToTopButton.addEventListener('click', () => {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+});
+
+
+// Responsive Navigation
+
+function showSideBar(){
+  const sidebar = document.querySelector('.sidebar');
+  sidebar.style.display = 'flex';
+
+}
+function hideSideBar(){
+  const sidebar = document.querySelector('.sidebar');
+  sidebar.style.display = 'none';
+
+}
