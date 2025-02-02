@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List with Context API</title>
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6.26.0/babel.min.js"></script>
+    <style>
+       
+    body {
+        font-family: 'Poppins', sans-serif;
+        background-color: #1e1e2f;
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+    }
+    #root {
+        width: 350px;
+        background: #2a2a3b;
+        padding: 20px;
+        border-radius: 12px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    }
+    h2 {
+        text-align: center;
+        color: #ffcc00;
+    }
+    input {
+        width: calc(100% - 22px);
+        padding: 12px;
+        margin-bottom: 12px;
+        border: 2px solid #ffcc00;
+        border-radius: 8px;
+        background: #33334d;
+        color: #fff;
+        font-size: 16px;
+    }
+    button {
+        width: 100%;
+        padding: 12px;
+        border: none;
+        background: #ffcc00;
+        color: #1e1e2f;
+        font-weight: bold;
+        border-radius: 8px;
+        cursor: pointer;
+        font-size: 16px;
+    }
+    button:hover {
+        background: #e6b800;
+    }
+    ul {
+        list-style-type: none;
+        padding: 0;
+    }
+    .task {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: #3a3a52;
+        padding: 10px;
+        margin: 8px 0;
+        border-radius: 8px;
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+    }
+    .task span {
+        flex-grow: 1;
+        cursor: pointer;
+        font-size: 16px;
+    }
+    .completed {
+        text-decoration: line-through;
+        color: #999;
+    }
+    .task button {
+        background: #ff4444;
+        color: white;
+        border: none;
+        padding: 6px 10px;
+        font-size: 14px;
+        border-radius: 6px;
+        cursor: pointer;
+    }
+    .task button:hover {
+        background: #cc0000;
+    }
+</style>
+
+    </style>
+</head>
+<body>
+    <div id="root"></div>
+    
+    <script type="text/babel">
+        const { createContext, useContext, useState } = React;
+
+        const TodoContext = createContext();
+
+        function TodoProvider({ children }) {
+            const [tasks, setTasks] = useState([]);
+
+            const addTask = (task) => {
+                setTasks([...tasks, { text: task, completed: false }]);
+            };
+
+            const removeTask = (index) => {
+                setTasks(tasks.filter((_, i) => i !== index));
+            };
+
+            const toggleTask = (index) => {
+                setTasks(tasks.map((task, i) => i === index ? { ...task, completed: !task.completed } : task));
+            };
+
+            return (
+                <TodoContext.Provider value={{ tasks, addTask, removeTask, toggleTask }}>
+                    {children}
+                </TodoContext.Provider>
+            );
+        }
+
+        function TodoApp() {
+            const { tasks, addTask, removeTask, toggleTask } = useContext(TodoContext);
+            const [task, setTask] = useState('');
+
+            return (
+                <div>
+                    <h2>To-Do List</h2>
+                    <input value={task} onChange={(e) => setTask(e.target.value)} placeholder="Enter task..." />
+                    <button onClick={() => { if (task.trim()) { addTask(task); setTask(''); } }}>Add</button>
+                    <ul>
+                        {tasks.map((t, index) => (
+                            <li key={index} className={`task ${t.completed ? 'completed' : ''}`}>
+                                <span onClick={() => toggleTask(index)} style={{ cursor: 'pointer' }}>{t.text}</span>
+                                <button onClick={() => removeTask(index)}>❌</button>
+                            </li>
+                        ))}
+                    </ul>
+                </div>
+            );
+            
+        }
+
+        function App() {
+            return (
+                <TodoProvider>
+                    <TodoApp />
+                </TodoProvider>
+            );
+        }
+
+        ReactDOM.createRoot(document.getElementById('root')).render(<App />);
+    </script>
+</body>
+</html>
