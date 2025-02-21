@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="icon" href="data:,"> 
+</head>
+<body>
+    
+    <h1>Enter some values</h1>
+
+    <input type="text" id="val1" placeholder="val1">
+    <input type="text" id="val2" placeholder="val2">
+
+    <button onclick="checkValues()">Submit</button> 
+
+    <div id="display"></div>
+
+    <script>
+        function checkValues() {  
+            let val1 = document.getElementById('val1').value;
+            let val2 = document.getElementById('val2').value;
+
+            console.log("Value 1:", val1);
+            console.log("Value 2:", val2);
+
+            if (val1 == val2) {
+                console.log('Both values are equal .');
+                // document.getElementById('display').innerText = 'Both values are equal .';
+            }
+             if (val1 === val2) {
+                console.log('Both values are equal and of the same data type .');
+                // document.getElementById('display').innerText.append = 'Both values are equal and of the same data type .';
+            }
+
+            
+
+            if (val1 != val2) {
+                console.log('Both values are not equal .');
+            }
+            if (val1 !== val2) {
+                console.log('Both values are not equal and of different types .');
+            }
+
+            
+        }
+    </script>
+
+</body>
+</html>
